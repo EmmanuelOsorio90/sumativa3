@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Actualizar</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" padding>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txNombre" [(ngModel)]="perrito.nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Raza</ion-label>
+      <ion-input type="text" name="txRaza" [(ngModel)]="perrito.raza" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="updatePerrito()" expand="block" color="success">Actualizar</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="mycolor" >
+    <ion-title class="ion-text-center">Pet Dogy © 2023</ion-title>
+  </ion-toolbar>
+</ion-footer>

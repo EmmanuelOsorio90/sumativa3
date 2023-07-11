@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  color="primary">
+  <form  #form="ngForm" (ngSubmit)="(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Registrate</h3>
+            <h4>Es rápido y fácil.</h4>
+            <br>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Nombre" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Apellido" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="date" type="date" placeholder="Fecha de nacimiento" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="Correo electrónico" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Contraseña nueva" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="confirm" type="password" placeholder="Repita su contraseña" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <ion-row class="top-20">
+            <ion-col>  
+                <ion-button  size="medium" type="submit" [disabled]="form.invalid" expand="block">Registrar</ion-button>  
+            </ion-col>
+            <ion-col>      
+                <ion-button  size="medium" type="submit" expand="block">limpiar</ion-button>        
+            </ion-col>
+          </ion-row>     
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="mycolor">
+    <ion-title class="ion-text-center">Pet Dogy © 2023</ion-title>
+  </ion-toolbar>
+</ion-footer>
